@@ -56,13 +56,19 @@ This audit investigates three common ways data can mislead decision-makers: **La
 
 **Scenario:** Simulated 10,000 crypto token launches using a Pareto distribution where 99% of tokens have near-zero market cap.
 
-**Key Findings (alpha=1.0, scale=$1,000):**
-- **All tokens (Graveyard):** Mean market cap ≈ $10,000–$20,000, Median ≈ $2,000. The vast majority of tokens cluster near the minimum.
-- **Top 1% survivors only:** Mean market cap ≈ $1,000,000+, a **~100× multiplier** over the full population mean.
-- Dual histograms reveal that the "Graveyard" distribution is massively right-skewed, while the survivor view creates an illusion of widespread success.
+**Key Findings (alpha=1.0, scale=$100,000):**
+
+| Metric | All Tokens (Graveyard) | Survivors (Top 1%) |
+|---|---|---|
+| Count | 10,000 | 100 |
+| Mean | $796,054.40 | $35,955,574.98 |
+| Median | $197,055.45 | $18,849,568.20 |
+
+- **Survivorship Bias Multiplier: 45.2x** — the Top 1% mean is 45 times the overall mean.
+- The vast majority of tokens cluster near the minimum, while a tiny fraction explode in value.
 - Using alpha=1.0 (the most extreme Pareto distribution) closely mirrors real crypto markets like Pump.fun, where 98.6% of tokens fail.
 
-**Takeaway:** Crypto success stories represent extreme outliers. Evaluating the market based only on visible winners is textbook survivorship bias. The ~100x bias multiplier shows that "Listed Coins" paint a wildly misleading picture of the actual market.
+**Takeaway:** Crypto success stories represent extreme outliers. Evaluating the market based only on visible winners is textbook survivorship bias. The 45.2x bias multiplier shows that "Listed Coins" paint a wildly misleading picture of the actual market.
 
 ---
 
